@@ -11,7 +11,7 @@ const Search = () => {
   useEffect(() => {
     axios
       .get(
-        `http://api.musixmatch.com/ws/1.1/track.search?q_track=${trackTitle}&page_size=10&page=1&s_track_rating=desc&apikey=e05f68db64e883b1f5ec12b755a16fd6`
+        `https://api.musixmatch.com/ws/1.1/track.search?q_track=${trackTitle}&page_size=10&page=1&s_track_rating=desc&apikey=e05f68db64e883b1f5ec12b755a16fd6`
       )
       .then(res => {
         let track_list = res.data.message.body.track_list;

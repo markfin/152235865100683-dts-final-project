@@ -34,14 +34,14 @@ useEffect(() => {
   
   axios
     .get(
-      `http://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${params.id}&apikey=e05f68db64e883b1f5ec12b755a16fd6`
+      `https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${params.id}&apikey=e05f68db64e883b1f5ec12b755a16fd6`
     )
     .then(res => {
       let lyrics = res.data.message.body.lyrics;
       setLyrics({ lyrics });
 
       return axios.get(
-        `http://api.musixmatch.com/ws/1.1/track.get?track_id=${params.id}&apikey=e05f68db64e883b1f5ec12b755a16fd6`
+        `https://api.musixmatch.com/ws/1.1/track.get?track_id=${params.id}&apikey=e05f68db64e883b1f5ec12b755a16fd6`
       );
     })
     .then(res => {
